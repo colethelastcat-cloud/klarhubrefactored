@@ -24,10 +24,6 @@ import ComparePlansModal from './components/modals/ComparePlansModal.jsx';
 import { PreviewModal } from './components/modals/PreviewModal/PreviewModal.jsx';
 import { PreviewAnimation } from './components/modals/PreviewModal/PreviewAnimation.jsx';
 import DiscordCounter from './components/DiscordCounter.jsx';
-import ComparePlansModal from './components/modals/ComparePlansModal';
-import { PreviewModal } from './components/modals/PreviewModal/PreviewModal';
-import { PreviewAnimation } from './components/modals/PreviewModal/PreviewAnimation';
-import DiscordCounter from './components/DiscordCounter';
 
 const App = () => {
     // State Management

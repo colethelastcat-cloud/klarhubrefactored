@@ -1,24 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-// We will create this App.jsx file in the next step.
-// For now, it's just a placeholder.
-const App = () => {
-  return (
-    <div>
-      <h1>Hello, Klar Hub!</h1>
-      <p>Our new React app is loading...</p>
-    </div>
-  );
-};
+// 1. IMPORT the real App component from the file you made
+import App from './App.jsx'; 
 
-// This line imports all your CSS for the entire application.
+// 2. IMPORT your styles
 import './styles.css';
 
-// This is the standard React 18 way to start your app.
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+// 3. RENDER the imported App
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
-);
+  </React.StrictMode>,
+)

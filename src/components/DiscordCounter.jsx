@@ -2,13 +2,11 @@ import React, { useState, useEffect } from 'react';
 
 const DiscordCounter = () => {
     const [onlineCount, setOnlineCount] = useState(null);
-    const serverId = '1357439616877072545'; // Your Server ID
 
     useEffect(() => {
         const fetchCount = () => {
-            // NOTE: This uses a public CORS proxy which can be unreliable.
-            // For production, it's better to create your own serverless function.
-            const apiUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(`https://discord.com/api/guilds/${serverId}/widget.json`)}`;
+            // This is the new, reliable URL that points to the function we just made.
+            const apiUrl = '/api/discord-widget';
 
             fetch(apiUrl)
                 .then(response => {
@@ -16,9 +14,8 @@ const DiscordCounter = () => {
                     return response.json();
                 })
                 .then(data => {
-                    const discordData = JSON.parse(data.contents);
-                    if (discordData.presence_count !== undefined) {
-                        setOnlineCount(discordData.presence_count);
+                    if (data.presence_count !== undefined) {
+                        setOnlineCount(data.presence_count);
                     } else {
                         setOnlineCount('N/A');
                     }
@@ -33,7 +30,7 @@ const DiscordCounter = () => {
         const interval = setInterval(fetchCount, 60000); // Fetch every minute
 
         return () => clearInterval(interval);
-    }, [serverId]);
+    }, []);
 
     return (
         <div className="mt-4 text-lg text-theme-secondary">

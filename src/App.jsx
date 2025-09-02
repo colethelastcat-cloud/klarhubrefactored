@@ -1,25 +1,29 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 // Import Data
-import { pricingTiers, testimonials, faqs, features, supportedGames, demoVideos } from './data/siteData';
+import { pricingTiers, testimonials, faqs, features, supportedGames, demoVideos } from './data/siteData.js';
 
 // Import Hooks
-import { useFadeInSection } from './hooks/useFadeInSection';
-import { useInteractiveCard } from './hooks/useInteractiveCard';
-import { useAnimatedCounter } from './hooks/useAnimatedCounter';
-import { useActiveNav } from './hooks/useActiveNav';
+import { useFadeInSection } from './hooks/useFadeInSection.js';
+import { useInteractiveCard } from './hooks/useInteractiveCard.js';
+import { useAnimatedCounter } from './hooks/useAnimatedCounter.js';
+import { useActiveNav } from './hooks/useActiveNav.js';
 
 // Import Components
-import Header from './components/Header';
-import MobileMenu from './components/MobileMenu';
-import Footer from './components/Footer';
-import AuroraBackground from './components/AuroraBackground';
-import BackToTopButton from './components/BackToTopButton';
-import AIHelperButton from './components/modals/AIHelperButton';
-import AIHelperModal from './components/modals/AIHelperModal';
-import VideoModal from './components/modals/VideoModal';
-import GameFeaturesModal from './components/modals/GameFeaturesModal';
-import TosModal from './components/modals/TosModal';
+import Header from './components/Header.jsx';
+import MobileMenu from './components/MobileMenu.jsx';
+import Footer from './components/Footer.jsx';
+import AuroraBackground from './components/AuroraBackground.jsx';
+import BackToTopButton from './components/BackToTopButton.jsx';
+import AIHelperButton from './components/modals/AIHelperButton.jsx';
+import AIHelperModal from './components/modals/AIHelperModal.jsx';
+import VideoModal from './components/modals/VideoModal.jsx';
+import GameFeaturesModal from './components/modals/GameFeaturesModal.jsx';
+import TosModal from './components/modals/TosModal.jsx';
+import ComparePlansModal from './components/modals/ComparePlansModal.jsx';
+import { PreviewModal } from './components/modals/PreviewModal/PreviewModal.jsx';
+import { PreviewAnimation } from './components/modals/PreviewModal/PreviewAnimation.jsx';
+import DiscordCounter from './components/DiscordCounter.jsx';
 import ComparePlansModal from './components/modals/ComparePlansModal';
 import { PreviewModal } from './components/modals/PreviewModal/PreviewModal';
 import { PreviewAnimation } from './components/modals/PreviewModal/PreviewAnimation';
